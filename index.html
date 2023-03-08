@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="logo">
+          <i class="fas fa-hat-cowboy-side"></i> <span>Life</span>
+        </div>
+        <div class="header-info">
+          <h1>Don't have an account?</h1>
+          <p>Register to access all the features of our service.</p>
+          <p>Manage your business in one place. It's free!</p>
+          <div class="social-icons">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-google-plus-g"></i>
+            <i class="fab fa-instagram"></i>
+          </div>
+        </div>
+      </header>
+
+      <form class="form" id="form">
+        <h1>Sign up</h1>
+
+        <div class="form-control">
+          <label>Username</label>
+          <input type="text" id="username" />
+          <i class="fas fa-user"></i>
+          <small>Error message</small>
+        </div>
+
+        <div class="form-control">
+          <label>Email</label>
+          <input type="email" id="email" />
+          <i class="far fa-envelope-open"></i>
+          <small>Error message</small>
+        </div>
+
+        <div class="form-control">
+          <label>Password</label>
+          <input type="password" id="password" />
+          <i class="fas fa-key"></i>
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label>Re-Enter Password</label>
+          <input type="password" id="password2" />
+          <i class="fas fa-key"></i>
+          <small>Error message</small>
+        </div>
+        <div class="terms-block">
+          <label class="check-box">
+            <input type="checkbox" />
+            <span id="terms"></span>
+          </label>
+          <label class="terms-condition"
+            >I've read and agree with <span>Terms of Service</span> and our
+            Privacy Policy</label
+          >
+        </div>
+
+        <button id="btn" class="btn">Sign up</button>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

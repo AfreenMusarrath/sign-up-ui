@@ -1,0 +1,238 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+body {
+  background-color: #675270;
+  font-family: 'Roboto', sans-serif;
+  max-width: 190rem;
+  margin: 0 auto;
+}
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 1rem 2rem 3rem rgba(0, 0, 0, 0.2);
+  background: url('https://images.unsplash.com/photo-1494249465471-5655b7878482?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.header {
+  flex: 3;
+  font-size: 2.2rem;
+  padding: 8rem 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.877);
+}
+.header-info h1 {
+  letter-spacing: 0.3rem;
+  font-weight: 300;
+  margin: 2rem 0;
+}
+.header-info p {
+  letter-spacing: 0.1rem;
+  font-size: 1.8rem;
+  color: #8d7499;
+}
+.social-icons {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.social-icons i {
+  margin-right: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.social-icons i:hover {
+  color: #675270;
+  transform: translateY(-0.4rem);
+}
+.form {
+  flex: 2;
+  background-color: rgba(1, 21, 59, 0.205);
+  color: rgba(255, 255, 255, 0.829);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem 2rem 0 8rem;
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(2rem);
+  -webkit-backdrop-filter: blur(2rem);
+}
+
+.form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgb(0, 0, 0, 0.4);
+  filter: blur(9rem);
+  z-index: -1;
+}
+
+.form h1 {
+  font-size: 3rem;
+  font-weight: normal;
+  letter-spacing: 0.4rem;
+  margin-bottom: 4rem;
+}
+.form-control {
+  position: relative;
+  font-size: 1.8rem;
+}
+.form-control label {
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  display: block;
+  color: #ffffffa8;
+}
+.form-control input {
+  width: 90%;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 1.5rem;
+  border-bottom: 0.3rem solid rgba(128, 128, 128, 0.288);
+  padding: 1rem 0;
+  color: #ffffff;
+  margin-bottom: 0.4rem;
+}
+.form-control i {
+  position: absolute;
+  top: 25%;
+  right: 12%;
+  color: rgba(255, 255, 255, 0.514);
+}
+
+.form-control small {
+  display: block;
+}
+
+input:focus {
+  outline: none;
+  border-color: #8d7499;
+}
+small {
+  visibility: hidden;
+  margin-bottom: 1rem;
+}
+.check-box {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+}
+.check-box input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+#terms {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  border: 0.3rem solid rgba(128, 128, 128, 0.753);
+}
+
+#terms:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ #terms:after {
+  display: block;
+}
+.terms-block {
+  display: flex;
+  align-items: center;
+}
+.container #terms:after {
+  left: 3px;
+  top: 1px;
+  width: 4px;
+  height: 7px;
+  border: solid rgba(128, 128, 128, 0.753);
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+.terms-condition {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  color: #675270;
+  letter-spacing: 0.1rem;
+}
+.terms-condition span {
+  text-decoration: underline;
+  color: rgba(255, 255, 255, 0.767);
+}
+
+.btn {
+  color: #fff;
+  font-size: 1.8rem;
+  outline: none;
+  border-radius: 0.5rem;
+  border: 0;
+  background-color: rgba(226, 63, 13, 0.815);
+  margin-top: 4rem;
+  height: 4rem;
+  width: 15rem;
+  transition: all 0.2s ease-in-out;
+}
+.btn:hover {
+  transform: translateY(-0.2rem);
+  box-shadow: 0.4rem 1rem 1rem rgba(224, 10, 10, 0.2);
+}
+.form-control.success input {
+  border-color: rgba(19, 224, 19, 0.459);
+}
+
+.form-control.error input {
+  border-color: rgba(233, 34, 8, 0.534);
+}
+
+.form-control.error small {
+  visibility: visible;
+  color: rgba(233, 34, 8, 0.637);
+}
+
+@media (max-width: 766px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .header {
+    font-size: 2.2rem;
+    padding: 4rem 4rem;
+  }
+  .header-info p {
+    color: rgba(255, 255, 255, 0.699);
+  }
+  .form {
+    padding: 5rem 4rem;
+  }
+  .form-control input {
+    width: 100%;
+  }
+  .form-control i {
+    right: 0;
+  }
+}
